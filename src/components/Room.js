@@ -482,7 +482,7 @@ const Room = () => {
       setConnectionStatus("connecting");
       addLog("Connecting WebSocket...");
 
-      const wsUrl = `wss://ws.url-to-mp3-converter.com/ws/${roomId}?language=${language}`;
+      const wsUrl = `wss://url-to-mp3-converter.com/ws/${roomId}?language=${language}`;
       addLog(`Connecting WebSocket: ${wsUrl}`);
 
       const ws = new WebSocket(wsUrl);
