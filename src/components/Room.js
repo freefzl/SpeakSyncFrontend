@@ -21,14 +21,28 @@ const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(3),
     marginTop: theme.spacing(3),
+    width: "100%",
+    maxWidth: 800,
+    margin: "0 auto",
+    [theme.breakpoints.down("sm")]: {
+      padding: theme.spacing(2),
+      marginTop: theme.spacing(2),
+    },
   },
   statusPaper: {
     padding: theme.spacing(2),
     marginTop: theme.spacing(2),
     backgroundColor: theme.palette.background.default,
+    width: "100%",
+    [theme.breakpoints.down("sm")]: {
+      padding: theme.spacing(1),
+    },
   },
   button: {
     margin: theme.spacing(1),
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   },
   audioStatus: {
     marginTop: theme.spacing(2),
@@ -36,6 +50,21 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.info.light,
     color: theme.palette.info.contrastText,
     borderRadius: theme.shape.borderRadius,
+    width: "100%",
+  },
+  title: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.5rem",
+    },
+  },
+  container: {
+    width: "100%",
+    maxWidth: 800,
+    margin: "0 auto",
+    padding: theme.spacing(2),
+    [theme.breakpoints.down("sm")]: {
+      padding: theme.spacing(1),
+    },
   },
 }));
 
@@ -623,15 +652,21 @@ const Room = () => {
   }, [addLog]);
 
   return (
-    <Grid container spacing={2} direction="column" alignItems="center">
+    <Grid
+      container
+      spacing={2}
+      direction="column"
+      alignItems="center"
+      className={classes.container}
+    >
       <Paper className={classes.root}>
-        <Grid item>
-          <Typography variant="h4" gutterBottom>
+        <Grid item xs={12}>
+          <Typography variant="h4" gutterBottom className={classes.title}>
             Room: {roomId || "Please enter Room ID in URL"}
           </Typography>
         </Grid>
 
-        <Grid item>
+        <Grid item xs={12}>
           <Typography variant="body1" gutterBottom>
             Current Language: {language}
           </Typography>
@@ -639,12 +674,12 @@ const Room = () => {
 
         <Paper className={classes.statusPaper}>
           <Grid container spacing={2} alignItems="center">
-            <Grid item>
+            <Grid item xs={12} sm={6}>
               <Typography variant="body2">
                 Status: {!roomId ? "Waiting for Room ID" : connectionStatus}
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
               <Typography variant="body2" color="textSecondary">
                 Current Members: {roomMembers}
               </Typography>
@@ -657,13 +692,14 @@ const Room = () => {
           </Grid>
         </Paper>
 
-        <Grid item>
+        <Grid item xs={12}>
           <Button
             variant="contained"
             color={isRecording ? "secondary" : "primary"}
             onClick={isRecording ? stopRecording : startRecording}
             className={classes.button}
             disabled={!roomId || connectionStatus !== "connected"}
+            fullWidth
           >
             {isRecording ? "Stop Speaking" : "Start Speaking"}
           </Button>

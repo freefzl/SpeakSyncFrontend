@@ -81,7 +81,7 @@ const Home = () => {
             align="center"
             className={classes.heading}
           >
-            Real-time Multilingual Voice Chat Room
+            Real-time Multilingual Speak Sync Voice Chat Room
           </Typography>
 
           <Typography
