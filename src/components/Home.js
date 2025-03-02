@@ -93,6 +93,16 @@ const Home = () => {
             Break language barriers with real-time voice translation in multiple
             languages
           </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            color="textSecondary"
+            gutterBottom
+          >
+            Enter a custom room ID and share it with your friends. If they enter the same room ID, they will join the same room and be able to communicate with each other.
+
+Selecting a language means choosing the language you will be using. If others select a different language, the system will automatically translate their speech into your chosen language and play it as audio.
+          </Typography>
         </Grid>
 
         <Grid item xs={12}>
