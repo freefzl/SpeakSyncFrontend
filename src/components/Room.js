@@ -701,7 +701,7 @@ const Room = () => {
             disabled={!roomId || connectionStatus !== "connected"}
             fullWidth
           >
-            {isRecording ? "Stop Speaking" : "Start Speaking"}
+            {isRecording ? "Send Speaking" : "Start Speaking"}
           </Button>
         </Grid>
 
