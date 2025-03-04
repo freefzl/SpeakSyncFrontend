@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(3),
-    marginTop: "auto",
+    marginTop: "5%",
     width: "100%",
     borderTop: `1px solid ${theme.palette.divider}`,
   },
@@ -47,7 +47,7 @@ const Footer = () => {
           align="center"
           className={classes.copyright}
         >
-          © {currentYear} Multilingual Speak Sync Voice Chat SpeakSyncs.com. All rights reserved.
+          © {currentYear} Multilingual Speak Sync Voice Chat SpeakSyncs.com. All rights reserved. email:fengemma9@gmail.com
         </Typography>
       </div>
     </footer>
