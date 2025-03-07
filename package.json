@@ -8,6 +8,7 @@
     "@material-ui/lab": "^4.0.0-alpha.60",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^5.3.0",
     "web-vitals": "^1.0.1"
   },

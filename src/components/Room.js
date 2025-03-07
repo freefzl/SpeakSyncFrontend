@@ -513,6 +513,8 @@ const Room = () => {
 
       const wsUrl = `wss://url-to-mp3-converter.com/ws/${roomId}?language=${language}`;
       addLog(`Connecting WebSocket: ${wsUrl}`);
+      // const wsUrl = `ws://127.0.0.1:8000/ws/${roomId}?language=${language}`;
+      // addLog(`Connecting WebSocket: ${wsUrl}`);
 
       const ws = new WebSocket(wsUrl);
       websocketRef.current = ws;
