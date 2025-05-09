@@ -47,7 +47,7 @@ const Footer = () => {
           align="center"
           className={classes.copyright}
         >
-          © {currentYear} Multilingual Speak Sync Voice Chat SpeakSyncs.com. All rights reserved. email:fengemma9@gmail.com
+          © {currentYear} Multilingual Speak Sync Voice Chat SpeakSyncs.com. All rights reserved. If you have any suggestions, send me an email:fengemma9@gmail.com
         </Typography>
       </div>
     </footer>
